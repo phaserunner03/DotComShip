@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.game'
+version = '1.0'
+
+application {
+    mainClass = 'com.game.Main'  // ✅ Set the correct entry point
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.game.Main'  // ✅ Ensure JAR runs the correct class
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add dependencies if needed (none required for this project)
+}
